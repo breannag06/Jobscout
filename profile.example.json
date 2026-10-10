@@ -1,0 +1,37 @@
+{
+  "contact": {
+    "Full name": "",
+    "Email": "",
+    "Phone": "",
+    "City and state": "Albuquerque, NM",
+    "LinkedIn": "",
+    "Portfolio or GitHub": ""
+  },
+  "education": {
+    "School": "University of New Mexico",
+    "Degrees": "Dual degree in Statistics and Economics",
+    "Class standing": "Sophomore",
+    "Expected graduation": "May 2029",
+    "GPA": "",
+    "Relevant coursework": ""
+  },
+  "eligibility": {
+    "Authorized to work in the US": "",
+    "Will you need visa sponsorship": "",
+    "Earliest internship start": "Late May 2027",
+    "Hours available during the school year": "15 to 20 hours per week",
+    "Willing to relocate for a summer internship": "Yes, with housing or a relocation stipend"
+  },
+  "answers": {
+    "Tell us about yourself": "",
+    "Why sales?": "",
+    "Why data and AI companies?": "",
+    "Why this company?": "",
+    "Greatest strength": ""
+  },
+  "resumes": {
+    "sales": "",
+    "data": "",
+    "other": ""
+  }
+}

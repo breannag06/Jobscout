@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}My answers{% endblock %}
+{% block heading %}My answers{% endblock %}
+{% block content %}
+  <p class="summary">The things every application asks for. Hit Copy, paste, and move on.</p>
+  {% if profile_error %}<div class="note">There's a problem with {{ profile_path.name }}: {{ profile_error }}</div>{% endif %}
+  {% if not profile.sections and not profile_error %}
+    <div class="empty">Nothing here yet. Fill in {{ profile_path.name }} to see your answers.</div>
+  {% endif %}
+
+  {% for section, fields in profile.sections.items() %}
+    <h2>{{ section | replace('_', ' ') | capitalize }}</h2>
+    <dl class="answers">
+      {% for label, text in fields.items() %}
+        {% set field_id = 'f' ~ loop.index ~ '-' ~ section | replace(' ', '-') %}
+        <div class="answer">
+          <dt>{{ label }}</dt>
+          <dd id="{{ field_id }}" class="{{ '' if text else 'blank' }}">{{ text or 'Not filled in yet' }}</dd>
+          {% if text %}<button type="button" data-copy="{{ field_id }}">Copy</button>{% endif %}
+        </div>
+      {% endfor %}
+    </dl>
+  {% endfor %}
+
+  {% if profile.resumes %}
+    <h2>Which resume to send</h2>
+    <dl class="answers">
+      {% for track, path in profile.resumes.items() %}
+        <div class="answer"><dt>{{ track | capitalize }} jobs</dt>
+          <dd class="{{ '' if path else 'blank' }}">{{ path or 'Not added yet' }}</dd></div>
+      {% endfor %}
+    </dl>
+  {% endif %}
+{% endblock %}

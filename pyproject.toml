@@ -1,0 +1,31 @@
+[project]
+name = "jobscout"
+version = "2.0.0"
+description = "Finds internships, part-time student jobs, and entry-level roles, and makes applying fast."
+requires-python = ">=3.10"
+dependencies = ["certifi>=2024.2.2", "Flask>=3.0", "fpdf2>=2.8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".", "tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF"]
+ignore = ["RUF001"]  # the "…" in notification labels is intentional
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["E501"]
+
+[tool.mypy]
+python_version = "3.10"
+files = ["jobscout", "job_finder.py", "dashboard.py"]
+strict = true
+warn_unreachable = true
+
+[[tool.mypy.overrides]]
+module = ["certifi"]
+ignore_missing_imports = true

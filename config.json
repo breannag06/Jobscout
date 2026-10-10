@@ -1,0 +1,907 @@
+{
+  "ntfy_server": "https://ntfy.sh",
+  "top_n": 10,
+  "daily_alert_time": "14:05",
+  "timezone": "America/Denver",
+  "companies": [
+    {
+      "name": "Databricks",
+      "source": "greenhouse",
+      "token": "databricks"
+    },
+    {
+      "name": "Datadog",
+      "source": "greenhouse",
+      "token": "datadog"
+    },
+    {
+      "name": "MongoDB",
+      "source": "greenhouse",
+      "token": "mongodb"
+    },
+    {
+      "name": "Twilio",
+      "source": "greenhouse",
+      "token": "twilio"
+    },
+    {
+      "name": "Cloudflare",
+      "source": "greenhouse",
+      "token": "cloudflare"
+    },
+    {
+      "name": "GitLab",
+      "source": "greenhouse",
+      "token": "gitlab"
+    },
+    {
+      "name": "Elastic",
+      "source": "greenhouse",
+      "token": "elastic"
+    },
+    {
+      "name": "Fivetran",
+      "source": "greenhouse",
+      "token": "fivetran"
+    },
+    {
+      "name": "Okta",
+      "source": "greenhouse",
+      "token": "okta"
+    },
+    {
+      "name": "Stripe",
+      "source": "greenhouse",
+      "token": "stripe"
+    },
+    {
+      "name": "Airtable",
+      "source": "greenhouse",
+      "token": "airtable"
+    },
+    {
+      "name": "Asana",
+      "source": "greenhouse",
+      "token": "asana"
+    },
+    {
+      "name": "Brex",
+      "source": "greenhouse",
+      "token": "brex"
+    },
+    {
+      "name": "Figma",
+      "source": "greenhouse",
+      "token": "figma"
+    },
+    {
+      "name": "Gusto",
+      "source": "greenhouse",
+      "token": "gusto"
+    },
+    {
+      "name": "Instacart",
+      "source": "greenhouse",
+      "token": "instacart"
+    },
+    {
+      "name": "Lyft",
+      "source": "greenhouse",
+      "token": "lyft"
+    },
+    {
+      "name": "Pinterest",
+      "source": "greenhouse",
+      "token": "pinterest"
+    },
+    {
+      "name": "Reddit",
+      "source": "greenhouse",
+      "token": "reddit"
+    },
+    {
+      "name": "Robinhood",
+      "source": "greenhouse",
+      "token": "robinhood"
+    },
+    {
+      "name": "Roblox",
+      "source": "greenhouse",
+      "token": "roblox"
+    },
+    {
+      "name": "Samsara",
+      "source": "greenhouse",
+      "token": "samsara"
+    },
+    {
+      "name": "Squarespace",
+      "source": "greenhouse",
+      "token": "squarespace"
+    },
+    {
+      "name": "Vercel",
+      "source": "greenhouse",
+      "token": "vercel"
+    },
+    {
+      "name": "Mixpanel",
+      "source": "greenhouse",
+      "token": "mixpanel"
+    },
+    {
+      "name": "PagerDuty",
+      "source": "greenhouse",
+      "token": "pagerduty"
+    },
+    {
+      "name": "New Relic",
+      "source": "greenhouse",
+      "token": "newrelic"
+    },
+    {
+      "name": "Dropbox",
+      "source": "greenhouse",
+      "token": "dropbox"
+    },
+    {
+      "name": "Anthropic",
+      "source": "greenhouse",
+      "token": "anthropic"
+    },
+    {
+      "name": "Glean",
+      "source": "greenhouse",
+      "token": "gleanwork"
+    },
+    {
+      "name": "Sigma Computing",
+      "source": "greenhouse",
+      "token": "sigmacomputing"
+    },
+    {
+      "name": "Starburst",
+      "source": "greenhouse",
+      "token": "starburst"
+    },
+    {
+      "name": "Dataiku",
+      "source": "greenhouse",
+      "token": "dataiku"
+    },
+    {
+      "name": "Grafana Labs",
+      "source": "greenhouse",
+      "token": "grafanalabs"
+    },
+    {
+      "name": "Cockroach Labs",
+      "source": "greenhouse",
+      "token": "cockroachlabs"
+    },
+    {
+      "name": "Collibra",
+      "source": "greenhouse",
+      "token": "collibra"
+    },
+    {
+      "name": "Intercom",
+      "source": "greenhouse",
+      "token": "intercom"
+    },
+    {
+      "name": "6sense",
+      "source": "greenhouse",
+      "token": "6sense"
+    },
+    {
+      "name": "Apollo.io",
+      "source": "greenhouse",
+      "token": "apolloio"
+    },
+    {
+      "name": "Braze",
+      "source": "greenhouse",
+      "token": "braze"
+    },
+    {
+      "name": "Neo4j",
+      "source": "greenhouse",
+      "token": "neo4j"
+    },
+    {
+      "name": "Labelbox",
+      "source": "greenhouse",
+      "token": "labelbox"
+    },
+    {
+      "name": "Together AI",
+      "source": "greenhouse",
+      "token": "togetherai"
+    },
+    {
+      "name": "CoreWeave",
+      "source": "greenhouse",
+      "token": "coreweave"
+    },
+    {
+      "name": "ZoomInfo",
+      "source": "greenhouse",
+      "token": "zoominfo"
+    },
+    {
+      "name": "Pendo",
+      "source": "greenhouse",
+      "token": "pendo"
+    },
+    {
+      "name": "Celonis",
+      "source": "greenhouse",
+      "token": "celonis"
+    },
+    {
+      "name": "Snowflake",
+      "source": "ashby",
+      "token": "snowflake"
+    },
+    {
+      "name": "OpenAI",
+      "source": "ashby",
+      "token": "openai"
+    },
+    {
+      "name": "Perplexity",
+      "source": "ashby",
+      "token": "perplexity"
+    },
+    {
+      "name": "Cohere",
+      "source": "ashby",
+      "token": "cohere"
+    },
+    {
+      "name": "Notion",
+      "source": "ashby",
+      "token": "notion"
+    },
+    {
+      "name": "Ramp",
+      "source": "ashby",
+      "token": "ramp"
+    },
+    {
+      "name": "Hex",
+      "source": "ashby",
+      "token": "hex"
+    },
+    {
+      "name": "Pinecone",
+      "source": "ashby",
+      "token": "pinecone"
+    },
+    {
+      "name": "Harvey",
+      "source": "ashby",
+      "token": "harvey"
+    },
+    {
+      "name": "ElevenLabs",
+      "source": "ashby",
+      "token": "elevenlabs"
+    },
+    {
+      "name": "Cursor",
+      "source": "ashby",
+      "token": "cursor"
+    },
+    {
+      "name": "Replit",
+      "source": "ashby",
+      "token": "replit"
+    },
+    {
+      "name": "Modal",
+      "source": "ashby",
+      "token": "modal"
+    },
+    {
+      "name": "Baseten",
+      "source": "ashby",
+      "token": "baseten"
+    },
+    {
+      "name": "LangChain",
+      "source": "ashby",
+      "token": "langchain"
+    },
+    {
+      "name": "Sierra",
+      "source": "ashby",
+      "token": "sierra"
+    },
+    {
+      "name": "Decagon",
+      "source": "ashby",
+      "token": "decagon"
+    },
+    {
+      "name": "Clay",
+      "source": "ashby",
+      "token": "claylabs"
+    },
+    {
+      "name": "Attio",
+      "source": "ashby",
+      "token": "attio"
+    },
+    {
+      "name": "Writer",
+      "source": "ashby",
+      "token": "writer"
+    },
+    {
+      "name": "Amplitude",
+      "source": "ashby",
+      "token": "amplitude"
+    },
+    {
+      "name": "Confluent",
+      "source": "ashby",
+      "token": "confluent"
+    },
+    {
+      "name": "Lovable",
+      "source": "ashby",
+      "token": "lovable"
+    },
+    {
+      "name": "n8n",
+      "source": "ashby",
+      "token": "n8n"
+    },
+    {
+      "name": "Salesforce",
+      "source": "workday",
+      "token": "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site"
+    },
+    {
+      "name": "Gartner",
+      "source": "workday",
+      "token": "https://gartner.wd5.myworkdayjobs.com/EXT"
+    },
+    {
+      "name": "Adobe",
+      "source": "workday",
+      "token": "https://adobe.wd5.myworkdayjobs.com/external_experienced"
+    },
+    {
+      "name": "NVIDIA",
+      "source": "workday",
+      "token": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite"
+    },
+    {
+      "name": "Workday",
+      "source": "workday",
+      "token": "https://workday.wd5.myworkdayjobs.com/Workday"
+    },
+    {
+      "name": "Hewlett Packard Enterprise",
+      "source": "workday",
+      "token": "https://hpe.wd5.myworkdayjobs.com/Jobsathpe"
+    },
+    {
+      "name": "Red Hat",
+      "source": "workday",
+      "token": "https://redhat.wd5.myworkdayjobs.com/jobs"
+    },
+    {
+      "name": "Autodesk",
+      "source": "workday",
+      "token": "https://autodesk.wd1.myworkdayjobs.com/Ext"
+    },
+    {
+      "name": "Cisco",
+      "source": "workday",
+      "token": "https://cisco.wd5.myworkdayjobs.com/Cisco_Careers"
+    },
+    {
+      "name": "Zoom",
+      "source": "workday",
+      "token": "https://zoom.wd5.myworkdayjobs.com/Zoom"
+    },
+    {
+      "name": "T-Mobile",
+      "source": "workday",
+      "token": "https://tmobile.wd1.myworkdayjobs.com/External",
+      "search_terms": [
+        "albuquerque"
+      ]
+    },
+    {
+      "name": "Verizon",
+      "source": "workday",
+      "token": "https://verizon.wd12.myworkdayjobs.com/verizon-careers",
+      "search_terms": [
+        "albuquerque"
+      ]
+    },
+    {
+      "name": "Target",
+      "source": "workday",
+      "token": "https://target.wd5.myworkdayjobs.com/targetcareers",
+      "search_terms": [
+        "albuquerque"
+      ]
+    },
+    {
+      "name": "Lowe's",
+      "source": "workday",
+      "token": "https://lowes.wd5.myworkdayjobs.com/LWS_External_CS",
+      "search_terms": [
+        "albuquerque"
+      ]
+    },
+    {
+      "name": "Dick's Sporting Goods",
+      "source": "workday",
+      "token": "https://dickssportinggoods.wd1.myworkdayjobs.com/DSG",
+      "search_terms": [
+        "albuquerque"
+      ]
+    },
+    {
+      "name": "Adzuna",
+      "source": "adzuna",
+      "token": "us"
+    }
+  ],
+  "level_keywords": [
+    "intern",
+    "interns",
+    "internship",
+    "internships",
+    "co-op",
+    "apprentice",
+    "apprenticeship",
+    "summer analyst",
+    "sophomore",
+    "rising junior",
+    "student",
+    "campus",
+    "ambassador",
+    "part-time",
+    "part time",
+    "entry level",
+    "entry-level",
+    "university",
+    "new grad",
+    "early career",
+    "associate",
+    "junior",
+    "development representative",
+    "sdr",
+    "bdr",
+    "sales associate",
+    "retail sales",
+    "specialty sales",
+    "mobile associate",
+    "mobile expert",
+    "seasonal",
+    "no experience",
+    "no prior experience",
+    "paid training",
+    "will train"
+  ],
+  "role_keywords": [
+    "sales",
+    "business development",
+    "account development",
+    "sdr",
+    "bdr",
+    "go-to-market",
+    "gtm",
+    "revenue operations",
+    "revops",
+    "lead generation",
+    "solutions",
+    "partnerships",
+    "customer success",
+    "customer experience",
+    "customer support",
+    "growth",
+    "campus",
+    "ambassador",
+    "data analyst",
+    "data analytics",
+    "data science",
+    "data scientist",
+    "analytics",
+    "business analyst",
+    "economics",
+    "economist",
+    "statistics",
+    "statistician",
+    "quantitative",
+    "research assistant",
+    "research analyst",
+    "strategy",
+    "business operations",
+    "bizops",
+    "pricing",
+    "market research",
+    "summer analyst",
+    "partnership",
+    "analyst",
+    "operations",
+    "consulting",
+    "consultant",
+    "client success",
+    "client services",
+    "mobile associate",
+    "mobile expert"
+  ],
+  "internship_only_role_keywords": [
+    "operations"
+  ],
+  "exclude_title_keywords": [
+    "senior",
+    "sr",
+    "staff",
+    "principal",
+    "director",
+    "vp",
+    "vice president",
+    "head of",
+    "chief",
+    "manager",
+    "lead",
+    "leader",
+    "architect",
+    "phd",
+    "ph.d",
+    "doctoral",
+    "postdoc",
+    "mba",
+    "master's",
+    "masters",
+    "2026",
+    "2026 graduates",
+    "2027 graduates",
+    "2028 graduates",
+    "software engineer",
+    "software developer",
+    "consulting engineer",
+    "operations engineer",
+    "security engineer",
+    "supervisor"
+  ],
+  "local_keywords": [
+    "albuquerque"
+  ],
+  "remote_keywords": [
+    "remote"
+  ],
+  "part_time_keywords": [
+    "part-time",
+    "part time",
+    "20 hours",
+    "flexible hours",
+    "flexible schedule",
+    "during the school year",
+    "during the academic year"
+  ],
+  "max_years_required": 2,
+  "score_keywords": {
+    "intern": 4,
+    "internship": 4,
+    "sophomore": 6,
+    "rising junior": 6,
+    "freshman": 3,
+    "underclassmen": 5,
+    "all class years": 5,
+    "class of 2029": 6,
+    "2029": 3,
+    "2027": 2,
+    "2028": 2,
+    "university": 2,
+    "entry": 2,
+    "new grad": 1,
+    "early career": 1,
+    "part-time": 3,
+    "stipend": 2,
+    "housing": 2,
+    "mentorship": 1,
+    "sales": 2,
+    "sales development": 3,
+    "business development": 3,
+    "prospecting": 3,
+    "outbound": 2,
+    "cold calling": 2,
+    "lead generation": 2,
+    "pipeline": 1,
+    "quota": 1,
+    "salesforce": 2,
+    "crm": 2,
+    "go-to-market": 2,
+    "customer-facing": 2,
+    "negotiation": 1,
+    "statistics": 3,
+    "statistical": 2,
+    "econometrics": 3,
+    "economics": 3,
+    "regression": 2,
+    "forecasting": 2,
+    "experimentation": 1,
+    "a/b testing": 1,
+    "sql": 3,
+    "python": 2,
+    "excel": 2,
+    "tableau": 2,
+    "data": 1,
+    "analytics": 2,
+    "ai": 2,
+    "generative ai": 2,
+    "llm": 1,
+    "machine learning": 1,
+    "data platform": 2,
+    "cloud": 1,
+    "rising senior": -5,
+    "final year": -5,
+    "senior year": -3,
+    "account development": 3,
+    "2029 graduates": 6,
+    "graduating in 2029": 6,
+    "2028 graduates": -6,
+    "class of 2028": -6,
+    "graduating in 2028": -6,
+    "graduating in 2027": -8,
+    "commission only": -20,
+    "commission-only": -20,
+    "100% commission": -20,
+    "straight commission": -20,
+    "be your own boss": -15,
+    "1099": -8
+  },
+  "foreign_locations": [
+    "london",
+    "dublin",
+    "ireland",
+    "india",
+    "bangalore",
+    "bengaluru",
+    "canada",
+    "toronto",
+    "vancouver",
+    "uk",
+    "united kingdom",
+    "germany",
+    "berlin",
+    "munich",
+    "singapore",
+    "sydney",
+    "australia",
+    "paris",
+    "france",
+    "amsterdam",
+    "netherlands",
+    "tokyo",
+    "japan",
+    "spain",
+    "brazil",
+    "israel",
+    "tel aviv",
+    "poland",
+    "emea",
+    "apac",
+    "latam",
+    "switzerland",
+    "zurich",
+    "mexico",
+    "ontario",
+    "quebec",
+    "british columbia",
+    "alberta",
+    "montreal",
+    "ottawa",
+    "calgary",
+    "china",
+    "beijing",
+    "shanghai",
+    "hong kong",
+    "korea",
+    "seoul",
+    "taiwan",
+    "malaysia",
+    "philippines",
+    "indonesia",
+    "thailand",
+    "vietnam",
+    "hyderabad",
+    "pune",
+    "mumbai",
+    "delhi",
+    "gurgaon",
+    "chennai",
+    "belgium",
+    "brussels",
+    "sweden",
+    "stockholm",
+    "denmark",
+    "copenhagen",
+    "norway",
+    "oslo",
+    "finland",
+    "helsinki",
+    "italy",
+    "milan",
+    "rome",
+    "madrid",
+    "barcelona",
+    "portugal",
+    "lisbon",
+    "austria",
+    "vienna",
+    "czech",
+    "prague",
+    "romania",
+    "bucharest",
+    "hungary",
+    "greece",
+    "turkey",
+    "istanbul",
+    "dubai",
+    "uae",
+    "saudi arabia",
+    "riyadh",
+    "south africa",
+    "nigeria",
+    "kenya",
+    "egypt",
+    "argentina",
+    "buenos aires",
+    "chile",
+    "colombia",
+    "bogota",
+    "peru",
+    "sao paulo",
+    "new zealand",
+    "auckland",
+    "melbourne",
+    "edinburgh",
+    "manchester",
+    "cork",
+    "dach",
+    "anz",
+    "apj",
+    "uki",
+    "nordics",
+    "benelux",
+    "mena",
+    "europe",
+    "asia",
+    "german",
+    "french",
+    "dutch",
+    "italian",
+    "japanese"
+  ],
+  "us_markers": [
+    "united states",
+    "usa",
+    "u.s.",
+    "north america",
+    "us",
+    "new mexico"
+  ],
+  "subsidy_keywords": [
+    "housing",
+    "relocation",
+    "stipend",
+    "lodging",
+    "travel assistance",
+    "moving assistance"
+  ],
+  "require_subsidy_for_away_internships": true,
+  "internship_keywords": [
+    "intern",
+    "interns",
+    "internship",
+    "co-op",
+    "summer analyst"
+  ],
+  "title_score_keywords": {
+    "sales": 12,
+    "sales development": 4,
+    "business development": 16,
+    "account development": 18,
+    "sdr": 18,
+    "bdr": 18,
+    "go-to-market": 12,
+    "gtm": 12,
+    "revenue operations": 6,
+    "solutions": 5,
+    "partnerships": 5,
+    "customer success": 4,
+    "campus": 6,
+    "ambassador": 6,
+    "data science": 6,
+    "data scientist": 6,
+    "data analyst": 6,
+    "analytics": 5,
+    "economics": 6,
+    "economist": 6,
+    "statistics": 6,
+    "quantitative": 5,
+    "strategy": 4,
+    "business operations": 4,
+    "research assistant": 4
+  },
+  "tracks": {
+    "sales": [
+      "sales",
+      "business development",
+      "account development",
+      "sdr",
+      "bdr",
+      "go-to-market",
+      "gtm",
+      "solutions",
+      "partnerships",
+      "partnership",
+      "customer success",
+      "client success",
+      "customer experience",
+      "client services",
+      "lead generation",
+      "revenue operations",
+      "revops",
+      "ambassador",
+      "campus",
+      "mobile associate",
+      "mobile expert"
+    ],
+    "data": [
+      "data",
+      "analytics",
+      "analyst",
+      "economics",
+      "economist",
+      "statistics",
+      "statistician",
+      "quantitative",
+      "research",
+      "strategy",
+      "pricing",
+      "operations",
+      "bizops",
+      "consulting",
+      "consultant"
+    ]
+  },
+  "workday_search_terms": [
+    "internship",
+    "summer 2027",
+    "summer 2028",
+    "sales development representative",
+    "business development representative",
+    "university",
+    "campus"
+  ],
+  "adzuna": {
+    "where": "Albuquerque, New Mexico",
+    "distance_km": 20,
+    "max_days_old": 21,
+    "pages_per_search": 2,
+    "searches": [
+      {
+        "category": "sales-jobs"
+      },
+      {
+        "what": "sales",
+        "part_time": true
+      }
+    ]
+  },
+  "follow_up_after_days": 7,
+  "remove_untouched_after_days": 7
+}

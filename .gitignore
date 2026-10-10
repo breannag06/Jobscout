@@ -1,0 +1,25 @@
+# Python and tooling
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Editors and macOS
+.DS_Store
+.vscode/
+.idea/
+
+# Personal data and keys (see secrets.example.json and profile.example.json)
+secrets.json
+profile.json
+
+# Runtime files
+jobs.db
+jobs.db-wal
+jobs.db-shm
+backups/
+application_tracker.pdf
+*.log

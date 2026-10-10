@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% block content %}
+  {% if profile_error %}<div class="note">There's a problem with profile.json: {{ profile_error }}</div>{% endif %}
+
+  <p class="summary">
+    <b>{{ counts['new'] }}</b> {{ 'job' if counts['new'] == 1 else 'jobs' }} to apply to{% if reach_outs_due %},
+    <b>{{ reach_outs_due }}</b> {{ 'reach-out' if reach_outs_due == 1 else 'reach-outs' }} due{% endif %}{% if awaiting %},
+    <b>{{ awaiting }}</b> still open from last time{% endif %}.
+  </p>
+
+  {% if reach_outs_due and view != 'reach_out' %}
+    <div class="note cherry">{{ reach_outs_due }} reach-out{{ 's' if reach_outs_due != 1 }} due.
+      <a href="{{ url_for('index', view='reach_out') }}">Send a quick follow-up</a>, then mark it done.</div>
+  {% endif %}
+  {% if view == 'housing' %}
+    <div class="note">These internships check every box except one: the posting doesn't mention
+      housing or a stipend. Big companies often cover it anyway, so it's worth asking the recruiter
+      before ruling them out.</div>
+  {% elif view == 'reach_out' and cards %}
+    <div class="note cherry">It's been a week since you applied. A short, friendly email to the
+      recruiter keeps you on their radar.</div>
+  {% endif %}
+
+  <nav class="tabs">
+    {% for key, label in view_labels.items() %}
+      <a href="{{ url_for('index', view=key) }}" class="{{ 'on' if key == view }}">{{ label }}<span>{{ counts[key] }}</span></a>
+    {% endfor %}
+  </nav>
+
+  <details class="add">
+    <summary>Found a job somewhere else? Add it here.</summary>
+    <form method="post" action="{{ url_for('add_job') }}" class="stack">
+      <input type="hidden" name="csrf" value="{{ csrf_token }}">
+      <input type="url" name="url" placeholder="Link to the posting" required>
+      <input type="text" name="title" placeholder="Job title" required>
+      <input type="text" name="company" placeholder="Company" required>
+      <div><button class="go">Add it</button></div>
+    </form>
+  </details>
+
+  {% for job in cards %}
+    <article class="job {{ 'asking' if job.awaiting_answer }}">
+      <div class="job-head">
+        <div class="job-main">
+          <div class="job-title"><a href="{{ job.url_safe }}" target="_blank" rel="noopener noreferrer"
+               title="Open the posting">{{ job.title }}</a></div>
+          <div class="where">{{ job.company }} &middot; {{ job.location or 'Location not listed' }}{% if job.posted %} &middot; posted {{ job.posted }}{% endif %}</div>
+          <div class="tags">
+            <span class="tag fit" title="Match score {{ job.score }}">{{ job.fit }}</span>
+            {% if job.is_internship %}<span class="tag good">Internship</span>{% endif %}
+            {% if job.is_part_time %}<span class="tag good">Part-time</span>{% endif %}
+            {% if job.track_label %}<span class="tag">{{ job.track_label }}</span>{% endif %}
+            {% if job.applied_ago %}<span class="tag good">Applied {{ job.applied_ago }}</span>{% endif %}
+            {% if job.follow_up_due %}<span class="tag heads-up">Time to reach out</span>
+            {% elif job.reach_out_by and job.status == 'applied' %}<span class="tag">Reach out {{ job.reach_out_by }}</span>{% endif %}
+            {% if job.closed_at %}<span class="tag heads-up">Posting closed</span>{% endif %}
+            {% if job.near_miss %}<span class="tag heads-up">Housing not mentioned</span>
+            {% elif job.rejected_reason %}<span class="tag heads-up">No longer a match: {{ job.rejected_reason }}</span>{% endif %}
+            {% if job.id.startswith('az-') %}<a class="tag" href="https://www.adzuna.com" target="_blank" rel="noopener noreferrer">Jobs by Adzuna</a>{% endif %}
+          </div>
+          {% if job.why %}<div class="why">Why it's here: {{ job.why }}.{% if job.resume %} Send your {{ job.resume }}.{% endif %}</div>{% endif %}
+        </div>
+        <div class="actions">
+          <a class="btn go" data-apply href="{{ url_for('open_job', job_id=job.id) }}"
+             target="_blank" rel="noopener noreferrer">Apply</a>
+          <form method="post" action="{{ url_for('set_status') }}">
+            <input type="hidden" name="csrf" value="{{ csrf_token }}">
+            <input type="hidden" name="job_id" value="{{ job.id }}">
+            <input type="hidden" name="view" value="{{ view }}">
+            {% if job.status == 'new' %}
+              <button name="status" value="applied">I applied</button>
+              <button name="status" value="skip">Not for me</button>
+            {% elif job.status == 'applied' %}
+              <button name="status" value="follow_up" class="{{ 'go' if job.follow_up_due }}"
+                      title="Moves it to your applications PDF">I followed up</button>
+              <button name="status" value="new">Undo</button>
+            {% else %}
+              <button name="status" value="new">Undo</button>
+            {% endif %}
+          </form>
+        </div>
+      </div>
+      {% if job.awaiting_answer %}
+        <div class="ask">You opened this one. Did you apply?</div>
+      {% endif %}
+      <details class="notes" {{ 'open' if job.notes }}>
+        <summary>{% if job.notes %}Notes: {{ job.notes[:70] }}{% else %}Add a note{% endif %}</summary>
+        <form method="post" action="{{ url_for('set_notes') }}" class="stack">
+          <input type="hidden" name="csrf" value="{{ csrf_token }}">
+          <input type="hidden" name="job_id" value="{{ job.id }}">
+          <input type="hidden" name="view" value="{{ view }}">
+          <textarea name="notes" placeholder="Recruiter's name, a referral, the deadline...">{{ job.notes }}</textarea>
+          <div><button>Save</button></div>
+        </form>
+      </details>
+    </article>
+  {% else %}
+    <div class="empty">{{ empty_message }}</div>
+  {% endfor %}
+{% endblock %}
