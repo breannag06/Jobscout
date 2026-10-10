@@ -5,8 +5,8 @@ the public job boards of 80+ companies, keeps only the postings that fit me, ran
 them, and gives me one place to apply from. Once a day it sends my phone a short
 summary of what's new and which applications I need to follow up on.
 
-I'm a sophomore at the University of New Mexico studying statistics and economics,
-working toward a sales career at data and AI companies (internships first, then a
+I'm a sophomore at the University of New Mexico studying Statistics and Economics,
+working toward a career in Enterprise Data and Technology Sales (internships first, then a
 sales development role). The filters and scoring are tuned to that path, but all
 of it lives in `config.json`.
 
